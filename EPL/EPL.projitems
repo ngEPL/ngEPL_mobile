@@ -23,6 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)sideList.xaml.cs">
       <DependentUpon>sideList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Assets\" />

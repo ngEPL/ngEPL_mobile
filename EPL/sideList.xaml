@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		x:Class="EPL.sideList" 
-		Title="List"
-		Padding="0,20,0,0">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	 		 x:Class="EPL.sideList" 
+		 	 Title="List"
+			 Padding="0,20,0,0">
 	<ContentPage.Content>
-		<ListView x:Name="listView" RowHeight="{Binding Height}">
+		<ListView x:Name="listView">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Orientation="Horizontal" >
-							<Image Source="{Binding Name, StringFormat='{0}.png'}"/>
-							<Label Text="{Binding Category}" />
+						<StackLayout 
+									 Orientation="Horizontal" 
+									 Padding="0,10,0,10" >
+							<Image Source="{Binding Name, StringFormat='{0}.png'}" 
+							       HorizontalOptions="CenterAndExpand"
+								   VerticalOptions="CenterAndExpand"
+								WidthRequest="150"/>
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>
