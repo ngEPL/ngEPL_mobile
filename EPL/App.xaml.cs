@@ -3,7 +3,7 @@
 namespace EPL {
 	public partial class App : Application {
 		public App() {
-			MainPage = new Menu();
+			MainPage = new sideList();
 		}
 
 		protected override void OnStart() {
