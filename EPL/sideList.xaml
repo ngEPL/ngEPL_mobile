@@ -2,25 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	 		 x:Class="EPL.sideList" 
-		 	 Title="List"
-			 Padding="0,20,0,0">
+		 	 Title="List">
+
+	<ContentPage.Padding>
+    	<OnPlatform x:TypeArguments="Thickness"
+                	iOS="0, 20, 0, 0" 
+					Android="0, 22, 0, 0" />
+  	</ContentPage.Padding>
+
 	<ContentPage.Content>
-		<ListView x:Name="listView">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<StackLayout 
-									 Orientation="Horizontal" 
-									 Padding="0,10,0,10" >
-							<Image Source="{Binding Name, StringFormat='{0}.png'}" 
-							       HorizontalOptions="CenterAndExpand"
-								   VerticalOptions="CenterAndExpand"
-								WidthRequest="150"/>
-						</StackLayout>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
+		<Grid>
+		    <Grid.RowDefinitions>
+				<RowDefinition Height="60" />
+				<RowDefinition Height="Auto" />
+		    </Grid.RowDefinitions>
+<!--
+		    <Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+		    </Grid.ColumnDefinitions>
+
+		    <BoxView Color="#FFFFFF"
+             	Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+-->			
+			<ListView x:Name="lstView"
+					  IsGroupingEnabled="true"
+					  GroupDisplayBinding="{Binding LongName}"
+					  Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" >
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout 
+										 Orientation="Horizontal" 
+										 Padding="16,8,0,8" >
+								<Image Source="{Binding Name, StringFormat='{0}.png'}" 
+								       HorizontalOptions="Start"
+									   VerticalOptions="Start"
+									   HeightRequest="{Binding Height}"/>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+		</Grid>
 	</ContentPage.Content>
 </ContentPage>
 

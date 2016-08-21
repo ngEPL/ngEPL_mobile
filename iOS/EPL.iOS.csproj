@@ -123,15 +123,14 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\blocks.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\elif.png" />
-    <BundleResource Include="Resources\loop.png" />
-    <BundleResource Include="Resources\move.png" />
-    <BundleResource Include="Resources\sound.png" />
-    <BundleResource Include="Resources\turn.png" />
-    <BundleResource Include="Resources\i_f.png" />
+    <BundleResource Include="Resources\block_elif.png" />
+    <BundleResource Include="Resources\block_if.png" />
+    <BundleResource Include="Resources\block_loop.png" />
+    <BundleResource Include="Resources\block_move.png" />
+    <BundleResource Include="Resources\block_sound.png" />
+    <BundleResource Include="Resources\block_start_click.png" />
+    <BundleResource Include="Resources\block_start_press.png" />
+    <BundleResource Include="Resources\block_turn.png" />
   </ItemGroup>
   <Import Project="..\EPL\EPL.projitems" Label="Shared" Condition="Exists('..\EPL\EPL.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

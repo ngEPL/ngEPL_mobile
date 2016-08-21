@@ -7,7 +7,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>EPL.Droid</RootNamespace>
-    <AssemblyName>EPL.Droid</AssemblyName>
+    <AssemblyName>EPL</AssemblyName>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -87,16 +87,20 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\elif.png" />
-    <AndroidResource Include="Resources\drawable\loop.png" />
-    <AndroidResource Include="Resources\drawable\move.png" />
-    <AndroidResource Include="Resources\drawable\sound.png" />
-    <AndroidResource Include="Resources\drawable\turn.png" />
-    <AndroidResource Include="Resources\drawable\i_f.png" />
+    <AndroidResource Include="Resources\drawable\block_elif.png" />
+    <AndroidResource Include="Resources\drawable\block_if.png" />
+    <AndroidResource Include="Resources\drawable\block_loop.png" />
+    <AndroidResource Include="Resources\drawable\block_move.png" />
+    <AndroidResource Include="Resources\drawable\block_sound.png" />
+    <AndroidResource Include="Resources\drawable\block_start_click.png" />
+    <AndroidResource Include="Resources\drawable\block_start_press.png" />
+    <AndroidResource Include="Resources\drawable\block_turn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="..\EPL\EPL.projitems" Label="Shared" Condition="Exists('..\EPL\EPL.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
