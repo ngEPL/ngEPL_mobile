@@ -92,11 +92,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\elif.png" />
-    <AndroidResource Include="Resources\drawable\iif.png" />
     <AndroidResource Include="Resources\drawable\loop.png" />
     <AndroidResource Include="Resources\drawable\move.png" />
     <AndroidResource Include="Resources\drawable\sound.png" />
     <AndroidResource Include="Resources\drawable\turn.png" />
+    <AndroidResource Include="Resources\drawable\i_f.png" />
   </ItemGroup>
   <Import Project="..\EPL\EPL.projitems" Label="Shared" Condition="Exists('..\EPL\EPL.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

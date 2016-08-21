@@ -127,11 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\elif.png" />
-    <BundleResource Include="Resources\if.png" />
     <BundleResource Include="Resources\loop.png" />
     <BundleResource Include="Resources\move.png" />
     <BundleResource Include="Resources\sound.png" />
     <BundleResource Include="Resources\turn.png" />
+    <BundleResource Include="Resources\i_f.png" />
   </ItemGroup>
   <Import Project="..\EPL\EPL.projitems" Label="Shared" Condition="Exists('..\EPL\EPL.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
