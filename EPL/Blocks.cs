@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
 
 namespace EPL {
 
@@ -19,28 +20,13 @@ namespace EPL {
 		public string ShortName { get; set; }
 	}
 
+	//public class PersonDataTemplateSelector : DataTemplateSelector {
+	//	public DataTemplate ValidTemplate { get; set; }
+	//	public DataTemplate InvalidTemplate { get; set; }
 
-
-
-	////블록 리스트
-	//public class Data {
-
-
-	//	#region inputList
-	//	public static ObservableCollection<Blocks> inputList = new ObservableCollection<Blocks>{
-	//		new Blocks { Name="block_loop", Category="반복",Height =124 },
-			                 
-	//		new Blocks { Name="block_if", Category="조건", Height=124 },
-	//		new Blocks { Name="block_elif", Category="조건", Height=212 },
-	//		new Blocks { Name="block_sound", Category="일반", Height=60 },
-	//		new Blocks { Name="block_move", Category="일반", Height=60 },
-	//		new Blocks { Name="block_turn", Category="일반", Height=60 },
-	//		new Blocks { Name="block_start_click", Category="시작", Height=72 },
-	//		new Blocks { Name="block_start_press", Category="시작", Height=72 }
-	//	};
-
-	//	#endregion
-
+	//	protected override DataTemplate OnSelectTemplate(object item, BindableObject container) {
+	//		return item.Blocks.Category == "일반" ? ValidTemplate : InvalidTemplate;
+	//	}
 	//}
 }
 

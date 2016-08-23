@@ -16,6 +16,13 @@
 				<RowDefinition Height="60" />
 				<RowDefinition Height="Auto" />
 		    </Grid.RowDefinitions>
+
+			<StackLayout Grid.Row="0" Orientation="Horizontal" Padding="5.5" HorizontalOptions="Center">
+				<Button Text="반복" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup1Command}" WidthRequest="50"/>
+				<Button Text="조건" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup2Command}" WidthRequest="50"/>
+				<Button Text="이동" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup1Command}" WidthRequest="50"/>
+				<Button Text="시작" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup2Command}" WidthRequest="50"/>
+			</StackLayout>
 <!--
 		    <Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto" />
@@ -24,7 +31,10 @@
 		    <BoxView Color="#FFFFFF"
              	Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
 -->			
-			<ListView x:Name="lstView"
+			
+
+			<!--	1,0 블록 리스트	-->
+			<ListView x:Name="blockList"
 					  IsGroupingEnabled="true"
 					  GroupDisplayBinding="{Binding LongName}"
 					  Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" >
