@@ -22,6 +22,7 @@
 				<Button Text="조건" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup2Command}" WidthRequest="50"/>
 				<Button Text="이동" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup1Command}" WidthRequest="50"/>
 				<Button Text="시작" TextColor="White" BackgroundColor="Gray" Command="{Binding LoadGroup2Command}" WidthRequest="50"/>
+
 			</StackLayout>
 <!--
 		    <Grid.ColumnDefinitions>
