@@ -16,9 +16,9 @@ namespace ngEPL_Android {
 
 	public class MainActivity : Activity {
 		
-		List<Block_Assets> Permission = new List<Block_Assets>();
+		List<Block_Assets> Canvas = new List<Block_Assets>();
 		ListView lvCanvas;
-		Block_Adapter adap_Permission;
+		Block_Adapter adap_Canvas;
 
 
 		List<Block_Assets> Block_List = new List<Block_Assets>();
@@ -37,6 +37,7 @@ namespace ngEPL_Android {
 			Block_List.Add(new Block_Assets("block1", "ic_2"));
 			Block_List.Add(new Block_Assets("block2", "ic_3"));
 			Block_List.Add(new Block_Assets("block3", "ic_4"));
+			Block_List.Add(new Block_Assets("block4", "ic_1"));
 
 
 
@@ -44,13 +45,13 @@ namespace ngEPL_Android {
 			/*왼쪽 리스트뷰*/
 			lvCanvas = FindViewById<ListView>(Resource.Id.lvCanvas);
 
-			adap_Permission = new Block_Adapter(this, Permission);
+			adap_Canvas = new Block_Adapter(this, Canvas);
 
-			lvCanvas.Adapter = adap_Permission;
+			lvCanvas.Adapter = adap_Canvas;
 
 			lvCanvas.ItemLongClick += (s, args) => {
 
-				ClipData data = ClipData.NewPlainText("canvas", args.Position.ToString());
+				ClipData data = ClipData.NewPlainText("Canvas", args.Position.ToString());
 
 				MyDragShadowBuilder my_shadown_screen = new MyDragShadowBuilder(args.View);
 
@@ -82,11 +83,10 @@ namespace ngEPL_Android {
 
 					if (args.Event.ClipDescription.Label.Equals("Block_List")) {
 
-						int posicion = int.Parse(args.Event.ClipData.GetItemAt(0).Text);
+						int position = int.Parse(args.Event.ClipData.GetItemAt(0).Text);
 
-						adap_Permission.add(adap_Block_List.Search(posicion));
-
-
+						adap_Canvas.add(adap_Block_List.Search(position));
+						
 					}
 
 					break;
@@ -141,11 +141,12 @@ namespace ngEPL_Android {
 					case DragAction.Drop:
 					args.Handled = true;
 
-					if (args.Event.ClipDescription.Label.Equals("canvas")) {
+					if (args.Event.ClipDescription.Label.Equals("Canvas")) {
 
-						int posicion = int.Parse(args.Event.ClipData.GetItemAt(0).Text);
+						int position = int.Parse(args.Event.ClipData.GetItemAt(0).Text);
 
-						adap_Permission.remove(posicion);
+				
+						adap_Canvas.remove(position);
 					}
 
 					break;
@@ -170,7 +171,7 @@ namespace ngEPL_Android {
 				v.DrawingCacheEnabled = true;
 				Bitmap bm = v.DrawingCache;
 				shadow = new BitmapDrawable(bm);
-				shadow.SetColorFilter(Color.ParseColor("#111111"), PorterDuff.Mode.Multiply);
+				shadow.SetColorFilter(Color.ParseColor("#ffffff"), PorterDuff.Mode.Multiply);
 
 
 			}
